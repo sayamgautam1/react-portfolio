@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Hamburger from "./components/Hamburger";
+import Scroll from "./components/Scroll";
 
 const HomeContainer = styled.div`
   width: 100vw;
@@ -37,6 +38,7 @@ function App() {
             SA <br />
             YAM
           </h1>
+          <Scroll />
         </Blue>
       </HomeContainer>
     </>
