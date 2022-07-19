@@ -9,9 +9,9 @@ const HamburgerImg = styled.img`
 `;
 const Hamburger = () => {
   return (
-    <div>
+    <>
       <HamburgerImg src={hamburger} />
-    </div>
+    </>
   );
 };
 
