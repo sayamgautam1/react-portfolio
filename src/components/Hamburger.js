@@ -1,0 +1,18 @@
+import React from "react";
+import styled from "styled-components";
+import hamburger from "../images/hamburger.png";
+
+const HamburgerImg = styled.img`
+  position: absolute;
+  right: 100px;
+  top: 100px;
+`;
+const Hamburger = () => {
+  return (
+    <div>
+      <HamburgerImg src={hamburger} />
+    </div>
+  );
+};
+
+export default Hamburger;
