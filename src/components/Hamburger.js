@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import hamburger from "../images/hamburger.png";
+import hamburger from "../images/hamburger.svg";
 
 const HamburgerImg = styled.img`
   position: absolute;
