@@ -68,7 +68,7 @@ const BlueBackground = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: ". . . . . . . . . . . . . . Hamburger" "JULIA JULIA JULIA JULIA . . . . . . . . . . ." "JULIA JULIA JULIA JULIA . . . . . . . . . . ." ". . . . . . . . . . . . . . .";
+  grid-template-areas: ". . . . . . . . . . . . . . Hamburger" "SAM SAM SAM SAM . . . . . . . . . . ." "SAM SAM SAM SAM . . . . . . . . . . ." ". . . . . . . . . . . . . . .";
   grid-area: BlueBackground;
   @keyframes slideFromRight {
     0% {
@@ -83,7 +83,7 @@ const BlueBackground = styled.div`
 `;
 
 const SAYAM = styled.div`
-  grid-area: JULIA;
+  grid-area: SAM;
   line-height: 92%;
   position: relative;
   margin-left: 30%;

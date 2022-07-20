@@ -2,19 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import hamburger from "./images/hamburger.svg";
+import hamburgerHover from "./images/hamburgerHover.svg";
 import close from "./images/close.svg";
 import { useState } from "react";
+import Main from "../Landing";
 
 const HamburgerContainer = styled.div`
   width: auto;
   height: auto;
-  positon: absolute;
-  right: 50px;
-  top: 40px;
+  padding-top: 40px;
+  padding-right: 40px;
+  grid-area: Hamburger;
 `;
 const HamburgerImg = styled.div`
   animation: fadeIn 1s forwards;
-  width: 30px;
+  width: ${(props) => (props.on ? `40px` : `20px`)};
   transition-duration: 0.2s;
   height: 30px;
   display: block;
@@ -23,7 +25,8 @@ const HamburgerImg = styled.div`
     props.on ? `url(${hamburger})` : `url(${close})`};
   background-size: 100%;
   background-repeat: no-repeat;
-  z-index: 99;
+  z-index: 99999;
+  position: relative;
   opacity: 0;
   @keyframes fadeIn {
     0% {
@@ -33,19 +36,22 @@ const HamburgerImg = styled.div`
       opacity: 1;
     }
   }
+  &:hover {
+    background-image: ${(props) =>
+      props.on ? `url(${hamburgerHover})` : `url(${close})`};
+  }
 `;
 
 const NavContainer = styled.div`
   height: 100vh;
   width: 500px;
   background-color: white;
-  position: absolute;
+  position: ${(props) => (props.on ? "fixed" : "absolute")};
   display: block;
   opacity: 0;
   transition: 0.3s;
   animation: ${(props) =>
     props.on ? "SlideOutRight .7s forwards" : "SlideFromLeft .5s forwards"};
-  z-index: -2;
   right: 0;
   top: 0;
   @keyframes SlideFromLeft {
@@ -72,6 +78,7 @@ const NavContainer = styled.div`
 
 const Links = styled.div`
   margin-top: 100px;
+  width: auto;
   & > a {
     display: block;
     color: black;
@@ -112,7 +119,7 @@ const Links = styled.div`
       position: absolute;
       bottom: 0px;
       z-index: -2;
-      background-color: #ffc7a2;
+      background-color: #ecf3f4;
       transition: width 0.4s;
     }
     &:hover::after {
@@ -132,7 +139,7 @@ const Links = styled.div`
 const Hamburger = () => {
   const [toggle, setToggle] = useState(true);
   return (
-    <div>
+    <>
       <HamburgerContainer>
         <HamburgerImg on={toggle} onClick={() => setToggle(!toggle)} />
       </HamburgerContainer>
@@ -144,7 +151,7 @@ const Hamburger = () => {
           <Link to="/about">Contact.</Link>
         </Links>
       </NavContainer>
-    </div>
+    </>
   );
 };
 
