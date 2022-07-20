@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Hamburger from "./components/Hamburger";
 import Scroll from "./components/Scroll";
-import insta from "./components/images/insta.png";
 
 const GridContainer = styled.div`
   .cursor {
@@ -122,6 +121,7 @@ const Triangle = styled.div`
       opacity: 1;
     }
   }
+  z-index: 1;
 `;
 const BlueTriangle = styled.div`
   width: 0;
@@ -169,9 +169,13 @@ const Landing = () => {
           <Description>
             <h1>Aspirant Full-Stack Developer</h1>
             <p>
-              Duis sit amet mauris in tortor facilisis ornare eleifend vel quam.
-              Aliquam erat volutpat. Integer non elementum sem, vel convallis
-              erat.
+              I’m a student at <strong>Adelaide University</strong>, a digital
+              minimalist, below average football fan, a quick learner &
+              passionate about technology.{" "}
+              <strong>
+                Feuled by black coffee and a drive to be better than I was
+                yesterday.
+              </strong>
             </p>
           </Description>
           <Hamburger />
