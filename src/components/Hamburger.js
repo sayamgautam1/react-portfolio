@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import hamburger from "../images/hamburger.svg";
-import close from "../images/close.svg";
+import hamburger from "./images/hamburger.svg";
+import close from "./images/close.svg";
 import { useState } from "react";
 
 const HamburgerContainer = styled.div`
@@ -75,7 +75,9 @@ const Hamburger = () => {
       <HamburgerContainer>
         <HamburgerImg on={toggle} onClick={() => setToggle(!toggle)} />
       </HamburgerContainer>
-      <NavContainer on={toggle}></NavContainer>
+      <NavContainer on={toggle}>
+        <h2>About</h2>
+      </NavContainer>
     </>
   );
 };

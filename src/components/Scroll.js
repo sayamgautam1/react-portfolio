@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrowImg from "../images/arrow.svg";
+import ArrowImg from "./images/arrow.svg";
 
 const ScrollNoticeContainer = styled.div`
   position: absolute;

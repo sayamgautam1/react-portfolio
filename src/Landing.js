@@ -64,7 +64,7 @@ const Cutout = styled.div`
 
 const Landing = () => {
   return (
-    <>
+    <div>
       <HomeContainer>
         <Blue>
           <Hamburger />
@@ -76,7 +76,7 @@ const Landing = () => {
           <Scroll />
         </Blue>
       </HomeContainer>
-    </>
+    </div>
   );
 };
 
