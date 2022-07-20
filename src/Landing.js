@@ -2,16 +2,74 @@ import styled from "styled-components";
 import Hamburger from "./components/Hamburger";
 import Scroll from "./components/Scroll";
 
-const HomeContainer = styled.div`
-  width: 100vw;
+const GridContainer = styled.div`
+  .cursor {
+    position: fixed;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+  }
+  .Mouse .cursor:nth-child(2) {
+    border: 1px solid gray;
+    z-index: 100002;
+  }
+  .Mouse .cursor:nth-child(1) {
+    background-color: black;
+    opacity: 0.8;
+    z-index: 100001;
+    height: 20px;
+    width: 20px;
+  }
   height: 100vh;
-  padding: 60px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-rows: 60px 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas: ". . . . . . . . ." ". Content Content Content Content Content Content Content ." ". Content Content Content Content Content Content Content ." ". Content Content Content Content Content Content Content ." ". Content Content Content Content Content Content Content ." ". . . . . . . . .";
 `;
 
-const Blue = styled.div`
-  background-color: #ecf3f4;
-  height: 100%;
+const Content = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". . . BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground" ". . . BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground" ". . SCROLL BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground" ". . SCROLL BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground BlueBackground";
+  grid-area: Content;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+`;
+const Cutout = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  border-top: 1000px solid white;
+  border-right: 500px solid transparent;
+  animation: ShiftEdge 1s forwards;
+  @keyframes ShiftEdge {
+    0% {
+      border-top: 2400px solid white;
+      border-right: 300px solid transparent;
+    }
+    100% {
+      border-top: 1000px solid white;
+      border-right: 500px solid transparent;
+    }
+  }
+`;
+const BlueBackground = styled.div`
   animation: slideFromRight 1s forwards;
+  background-color: #ecf3f4;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". . . . . . . . . . . . . . Hamburger" "JULIA JULIA JULIA JULIA . . . . . . . . . . ." "JULIA JULIA JULIA JULIA . . . . . . . . . . ." ". . . . . . . . . . . . . . .";
+  grid-area: BlueBackground;
   @keyframes slideFromRight {
     0% {
       transform: translate(2000px);
@@ -22,16 +80,19 @@ const Blue = styled.div`
       opacity: 1;
     }
   }
-  & h1 {
-    position: relative;
-    font-size: 200px;
-    line-height: 91.45%;
-    padding: 250px 0 0 300px;
-    animation: slideFromLeft 1s forwards;
-    animation-delay: 0.5s;
-    pointer-events: none;
-    opacity: 0;
-  }
+`;
+
+const SAYAM = styled.div`
+  grid-area: JULIA;
+  line-height: 92%;
+  position: relative;
+  margin-left: 30%;
+  font-size: 200px;
+  animation: slideFromLeft 1s forwards;
+  animation-delay: 0.5s;
+  pointer-events: none;
+  opacity: 0;
+  font-weight: 900;
   @keyframes slideFromLeft {
     0% {
       transform: translate(-1000px);
@@ -43,40 +104,21 @@ const Blue = styled.div`
     }
   }
 `;
-const Cutout = styled.div`
-  position: absolute;
-  width: 600px;
-  height: 0;
-  border-top: 1100px solid white;
-  border-right: 700px solid transparent;
-  animation: ShiftEdge 1s forwards;
-  @keyframes ShiftEdge {
-    0% {
-      border-top: 2400px solid white;
-      border-right: 300px solid transparent;
-    }
-    100% {
-      border-top: 1100px solid white;
-      border-right: 700px solid transparent;
-    }
-  }
-`;
-
 const Landing = () => {
   return (
-    <div>
-      <HomeContainer>
-        <Blue>
-          <Hamburger />
+    <GridContainer>
+      <Content>
+        <BlueBackground>
           <Cutout />
-          <h1>
+          <Hamburger />
+          <SAYAM>
             SA <br />
             YAM
-          </h1>
-          <Scroll />
-        </Blue>
-      </HomeContainer>
-    </div>
+          </SAYAM>
+        </BlueBackground>
+        <Scroll />
+      </Content>
+    </GridContainer>
   );
 };
 

@@ -6,11 +6,16 @@
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
 }
-
+.long {
+  transform: translateY(5px);
+}
 body {
   overflow: hidden;
 }
 
 h1 {
   font-weight: 900;
+}
+.scrolled {
+  color: blue;
 }
