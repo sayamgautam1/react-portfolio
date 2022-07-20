@@ -12,13 +12,14 @@ const HamburgerContainer = styled.div`
   height: auto;
   padding-top: 40px;
   padding-right: 40px;
-  grid-area: Hamburger;
+  grid-area: Ham;
 `;
-const HamburgerImg = styled.div`
+export const HamburgerImg = styled.div`
   animation: fadeIn 1s forwards;
   width: ${(props) => (props.on ? `40px` : `20px`)};
   transition-duration: 0.2s;
   height: 30px;
+  transform: translate(40px);
   display: block;
   animation-delay: 1s;
   background-image: ${(props) =>
