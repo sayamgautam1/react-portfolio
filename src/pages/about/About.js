@@ -1,5 +1,12 @@
+import Hamburger from "../../components/hamburger/Hamburger";
+
 const About = () => {
-  return <h1>Test</h1>;
+  return (
+    <div className="About">
+      <h1>Hi</h1>
+      <Hamburger />
+    </div>
+  );
 };
 
 export default About;
