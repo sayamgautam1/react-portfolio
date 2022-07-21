@@ -4,6 +4,7 @@ import Square from "../../components/square/Square";
 import IntroRow from "./IntroRow";
 import TimelineRow from "./TimelineRow";
 import SkillsGrid from "./SkillsGrid";
+import Footer from "../../components/footer/Footer";
 
 const Layout = styled.div`
   width: 100vw;
@@ -35,6 +36,7 @@ const About = () => {
         <RowSpacer />
         <SkillsGrid />
         <Hamburger />
+        <Footer />
       </Content>
     </Layout>
   );

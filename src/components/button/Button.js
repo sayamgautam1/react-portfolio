@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 import { Link } from "react-router-dom";
 
+const ButtonCont = styled.div`
+  max-width: 250px;
+`;
 const ButtonDiv = styled.p`
   font-family: "Lato", sans-serif;
   max-width: 90px;
