@@ -69,24 +69,21 @@ const IntroRow = () => {
     <Row>
       <Left>
         <HeaderText>
-          <h1>
-            Building More Than <br />
-            Just Websites
-          </h1>
+          <h1>What Do I Do?</h1>
           <p>
-            Duis sit amet mauris in tortor facilisis ornare eleifend vel quam.
-            Aliquam erat volutpat. Integer non elementum sem, vel convallis
-            erat.
+            Create fun projects in my spare time
+            <br /> Write quality code Keep my functions small, focused, and easy
+            to understand
           </p>
           <p>
-            Duis sit amet mauris in tortor facilisis ornare eleifend vel quam.
-            Aliquam erat volutpat. Integer non elementum sem, vel convallis
-            erat.
+            Leave comments as I create and maintain code <br />
+            Make tests for the code I write <br />
+            Document every feature
           </p>
           <p>
-            Duis sit amet mauris in tortor facilisis ornare eleifend vel quam.
-            Aliquam erat volutpat. Integer non elementum sem, vel convallis
-            erat.
+            Keep track of every bug <br /> Strictly follow security best
+            practices <br />
+            <strong>Never stop learning</strong>
           </p>
         </HeaderText>
       </Left>
