@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Landing from "./pages/landing/Landing";
 import About from "./pages/about/About";
+import Work from "./pages/work/Work";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
@@ -12,6 +13,7 @@ root.render(
     <Routes>
       <Route path="/" element={<Landing />}></Route>
       <Route path="/about" element={<About />}></Route>
+      <Route path="/work" element={<Work />}></Route>
     </Routes>
   </BrowserRouter>
 );

@@ -35,15 +35,15 @@ const SquareTitle = styled.div`
     }
   }
 `;
-const About = () => {
+const Work = () => {
   return (
     <Layout>
       <Content>
         <SquareTitle>
           <p>
-            AB
+            WO
             <br />
-            OUT<span>.</span>
+            RK <span>.</span>
           </p>
         </SquareTitle>
         <Hamburger />
@@ -51,5 +51,4 @@ const About = () => {
     </Layout>
   );
 };
-
-export default About;
+export default Work;

@@ -152,8 +152,8 @@ const Hamburger = () => {
         <Links on={toggle}>
           <Link to="/">Home.</Link>
           <Link to="/about">About.</Link>
-          <Link to="/about">Work.</Link>
-          <Link to="/about">Contacts.</Link>
+          <Link to="/work">Work.</Link>
+          <Link to="/about">Contact.</Link>
         </Links>
       </NavContainer>
     </>
