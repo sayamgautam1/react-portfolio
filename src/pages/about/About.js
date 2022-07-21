@@ -9,7 +9,12 @@ import Footer from "../../components/footer/Footer";
 const Layout = styled.div`
   width: 100vw;
   height: 100vh;
-  padding: 60px;
+  padding: 30px;
+
+  @media (min-width: 900px) {
+    width: 100vw;
+    padding: 60px;
+  }
 `;
 
 const Content = styled.div`
