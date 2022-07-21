@@ -10,8 +10,9 @@ const HamburgerContainer = styled.div`
   position: absolute;
   right: 0px;
   top: 0px;
+  height: 100%;
 `;
-export const HamburgerImg = styled.div`
+const HamburgerImg = styled.div`
   z-index: 99999;
   display: block;
   position: absolute;
@@ -44,7 +45,7 @@ animation-delay: 1s;
 `;
 
 const NavContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   z-index: 999;
   padding-left: 80px;
   width: 500px;
@@ -82,6 +83,7 @@ const NavContainer = styled.div`
 const Links = styled.div`
   margin-top: 100px;
   width: auto;
+  height: 40%;
   & > a {
     width: 200px;
     display: block;
@@ -89,7 +91,7 @@ const Links = styled.div`
     text-decoration: none;
     font-weight: 800;
     font-size: 45px;
-    margin: 31px 0 0 0;
+    margin: 5% 0 0 0;
     line-height: 91.45%;
     position: relative;
     z-index: 2;
@@ -123,11 +125,11 @@ const Links = styled.div`
       position: absolute;
       bottom: 0px;
       z-index: -2;
-      background-color: #ffc7a2;
       transition: width 0.4s;
     }
     &:hover::after {
       width: 150px;
+      background-color: #ffc7a2;
     }
     &:nth-child(2):hover::after {
       width: 150px;
@@ -147,15 +149,16 @@ const Hamburger = () => {
     <>
       <HamburgerContainer>
         <HamburgerImg on={toggle} onClick={() => setToggle(!toggle)} />
+
+        <NavContainer on={toggle}>
+          <Links on={toggle}>
+            <Link to="/">Home.</Link>
+            <Link to="/about">About.</Link>
+            <Link to="/work">Work.</Link>
+            <Link to="/about">Contact.</Link>
+          </Links>
+        </NavContainer>
       </HamburgerContainer>
-      <NavContainer on={toggle}>
-        <Links on={toggle}>
-          <Link to="/">Home.</Link>
-          <Link to="/about">About.</Link>
-          <Link to="/work">Work.</Link>
-          <Link to="/about">Contact.</Link>
-        </Links>
-      </NavContainer>
     </>
   );
 };
