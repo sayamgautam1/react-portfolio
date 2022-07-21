@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Hamburger from "./components/Hamburger";
-import Scroll from "./components/Scroll";
+import Hamburger from "../../components/hamburger/Hamburger";
 
 const GridContainer = styled.div`
   .cursor {

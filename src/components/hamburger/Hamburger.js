@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import hamburger from "./images/hamburger.svg";
-import hamburgerHover from "./images/hamburgerHover.svg";
-import close from "./images/close.svg";
+import hamburger from "./hamburger.svg";
+import hamburgerHover from "./hamburgerHover.svg";
+import close from "./close.svg";
 import { useState } from "react";
-import Main from "../Landing";
 
 const HamburgerContainer = styled.div`
   width: auto;
