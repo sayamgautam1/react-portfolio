@@ -9,7 +9,7 @@
   transform: translateY(5px);
 }
 body {
-  overflow: hidden;
+  overflow: scroll;
 }
 
 h1 {

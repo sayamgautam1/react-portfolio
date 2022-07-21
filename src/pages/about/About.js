@@ -97,7 +97,7 @@ const RightImage = styled.div`
   width: 100%;
   height: 50vh;
   max-height: 800px;
-  // min-height: 500px;
+  min-height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
