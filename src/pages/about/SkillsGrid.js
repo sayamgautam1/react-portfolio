@@ -16,7 +16,7 @@ const LeftSkills = styled.div`
   padding: 0;
   @media (min-width: 900px) {
     flex: 40%;
-    padding: 40px;
+    padding: 0px;
   }
 `;
 const RightSkills = styled.div`
@@ -24,14 +24,14 @@ const RightSkills = styled.div`
   padding: 0;
   @media (min-width: 900px) {
     flex: 30%;
-    padding: 40px;
+    padding: 0px;
   }
 `;
 
 const SkillDescription = styled.div`
   width: 100%;
   color: white;
-  padding: 30px 30px;
+  padding: 30px 20px;
   @media (min-width: 900px) {
     padding: 30px 20%;
   }
