@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Hamburger from "../../components/hamburger/Hamburger";
-
+import { Link } from "react-router-dom";
 import { breakpoints } from "../../Media";
 import { Container } from "../../components/container/Container";
 import Paragraph from "../../components/Paragraph";
@@ -133,6 +133,34 @@ const SubParagraph = styled(Paragraph)`
     max-width: 60%;
   }
 `;
+
+const ProjectParagraph = styled(Paragraph)`
+  margin-top: 10px;
+  max-width: unset;
+  margin-bottom: 20px;
+  @media (min-width: ${breakpoints.mobileMax}) {
+    max-width: 60%;
+  }
+`;
+
+const ProjectLink = styled(Paragraph)`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 163.19%;
+  display: inline;
+  color: black;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+  transition: border-bottom 0.2s;
+  :hover {
+    border-bottom: 2px solid black;
+  }
+  span {
+    font-size: 20px;
+  }
+`;
+
 const Work = () => {
   return (
     <Layout>
@@ -163,40 +191,76 @@ const Work = () => {
             <SubContainer>
               <ProjectRow>
                 <Project>
-                  <ProjectImage />
-                  <SubHeading>Forecast</SubHeading>
-                  <SubParagraph>
+                  <a href="#">
+                    <ProjectImage />
+                  </a>
+                  <a href="#">
+                    <SubHeading>Forecast</SubHeading>
+                  </a>
+                  <ProjectParagraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis ac pretium magna.
-                  </SubParagraph>
+                  </ProjectParagraph>
+                  <a href="#">
+                    <ProjectLink>
+                      VISIT PAGE <span>&#8250;</span>
+                    </ProjectLink>
+                  </a>
                 </Project>
                 <Project>
-                  <ProjectImage />
-                  <SubHeading>Forecast</SubHeading>
-                  <SubParagraph>
+                  <a href="#">
+                    <ProjectImage />
+                  </a>
+                  <a href="#">
+                    <SubHeading>Forecast</SubHeading>
+                  </a>
+                  <ProjectParagraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis ac pretium magna.
-                  </SubParagraph>
+                  </ProjectParagraph>
+                  <a href="#">
+                    <ProjectLink>
+                      VISIT PAGE <span>&#8250;</span>
+                    </ProjectLink>
+                  </a>
                 </Project>
               </ProjectRow>
             </SubContainer>
             <SubContainer>
               <ProjectRow>
                 <Project>
-                  <ProjectImage />
-                  <SubHeading>Forecast</SubHeading>
-                  <SubParagraph>
+                  <a href="#">
+                    <ProjectImage />
+                  </a>
+                  <a href="#">
+                    <SubHeading>Forecast</SubHeading>
+                  </a>
+                  <ProjectParagraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis ac pretium magna.
-                  </SubParagraph>
+                  </ProjectParagraph>
+                  <a href="#">
+                    <ProjectLink>
+                      VISIT PAGE <span>&#8250;</span>
+                    </ProjectLink>
+                  </a>
                 </Project>
                 <Project>
-                  <ProjectImage />
-                  <SubHeading>Forecast</SubHeading>
-                  <SubParagraph>
+                  <a href="#">
+                    <ProjectImage />
+                  </a>
+                  <a href="#">
+                    <SubHeading>Forecast</SubHeading>
+                  </a>
+                  <ProjectParagraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis ac pretium magna.
-                  </SubParagraph>
+                  </ProjectParagraph>
+                  <a href="#">
+                    <ProjectLink>
+                      VISIT PAGE <span>&#8250;</span>
+                    </ProjectLink>
+                  </a>
                 </Project>
               </ProjectRow>
             </SubContainer>
