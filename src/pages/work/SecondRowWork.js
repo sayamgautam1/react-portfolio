@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { breakpoints } from "../../Media";
 import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
-import MediaAppThumbnail from "./moviesearchapp.png";
-import MyButcher from "./mybutcher.png";
+import TechBlogThumb from "./techblog.png";
+import WeatherAppThumb from "./weatherapp.png";
 
 const ProjectContainer = styled.div`
   display: flex;
@@ -69,14 +69,14 @@ const Project = styled.div`
   }
   :nth-child(1) {
     ${ProjectImage} {
-      background-image: url(${MediaAppThumbnail});
+      background-image: url(${TechBlogThumb});
       background-size: cover;
       background-position-x: center;
     }
   }
   :nth-child(2) {
     ${ProjectImage} {
-      background-image: url(${MyButcher});
+      background-image: url(${WeatherAppThumb});
       background-size: cover;
       background-position-x: center;
     }
