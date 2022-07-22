@@ -9,7 +9,7 @@ import Button from "../../components/button/Button";
 const Layout = styled.div`
   display: flex;
   min-height: 100vh;
-  overflow: hidden;
+
   max-width: 2000px;
   margin: 0 auto;
   @media (min-width: ${breakpoints.mobileMax}) {
@@ -25,7 +25,7 @@ const Content = styled.div`
   flex: 1 0 auto;
   flex-wrap: wrap;
   position: relative;
-  overflow: scroll;
+
   @media (min-width: ${breakpoints.mobileMax}) {
     margin: 30px;
   }
@@ -75,84 +75,62 @@ const SquareTitle = styled.div`
   }
 `;
 
-const ProjectDescription = styled(Container)`
+const ProjectRow = styled.div`
+  display: flex;
   width: 100%;
-  height: 100%;
-  height: auto;
-  vertical-align: middle;
-  margin-left: 20px;
+  margin-bottom: 70px;
+  flex-wrap: wrap;
   @media (min-width: ${breakpoints.mobileMax}) {
-    width: 40%;
-    margin-left: 5%;
+    flex-wrap: nowrap;
   }
 `;
 
-const ProjectDiv = styled(Container)`
+const Project = styled.div`
+  width: 100%;
+  height: 450px;
+  :nth-child(1) {
+    margin-right: 0;
+    @media (min-width: ${breakpoints.mobileMax}) {
+      margin-right: 10%;
+    }
+  }
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 45%;
+  }
+`;
+const SubContainer = styled.div`
+  margin: 0px 0;
+  padding: 20px;
   width: 100%;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 0;
   @media (min-width: ${breakpoints.mobileMax}) {
-    width: 30%;
-    height: 800px;
-    display: block;
-    margin: 100px;
+    flex-wrap: nowrap;
   }
 `;
 
-const Project = styled(Container)`
+const TextContent = styled.div`
+  max-width: 700px;
+`;
+
+const ProjectImage = styled.div`
   width: 100%;
-  height: 400px;
-  padding: 0;
-  margin: 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #d3d3d3;
-  transition: box-shadow 0.2s;
-  /* background-image: url("https://s3-alpha-sig.figma.com/img/0f29/4ab3/d756d27ec4094f94acb28e642e628864?Expires=1563753600&Signature=JYk6w9M-Jj4Er-y8IuSG-FEiZUTuj9M~QP7b4wMho1fT3~ElNEBmAMNTo-N1jvOAye~RuJDBXVSqvqxv06B0ffJIIQPA3IcZ~sLtgipNokLkvWR4XhTOsc-mcbzrsExUkK~ERKBUiA0a4uO80vJpWIyygk~GyQLkamxvS4cp36rXe1K97nG6LzhMSgcFG86PQTr6EGk6ZqllqdIoqkOHdDPKVnMIiVcZO7XCOGOGU8SpVnP8FR7ZCxC-6KERGw2x4naITmG3uI5Is9EI1Js4Q~SHDSjepUJr9bnyNgJyhPHbAdTV-FI74dvWBAVsTS2KYPCeBbr9szlP~dFcXoNKNg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"); */
+  height: 300px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+`;
+
+const SubHeading = styled(Heading)`
+  font-size: 30px;
+  margin-bottom: 0;
+`;
+
+const SubParagraph = styled(Paragraph)`
+  margin-top: 10px;
+  max-width: unset;
   @media (min-width: ${breakpoints.mobileMax}) {
-    margin: 0 20px 20px 40px;
-    width: 400px;
-    height: 33%;
-  }
-  ::after {
-    content: "+";
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.2s;
-    font-size: 20px;
-    content: "+";
-    padding: 20px 30px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: white;
-  }
-  &:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    ::after {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  :nth-child(1) {
-    transform: translateX(0px);
-    @media (min-width: ${breakpoints.mobileMax}) {
-      transform: translateX(0px);
-    }
-  }
-  :nth-child(2) {
-    transform: translateX(0px);
-    @media (min-width: ${breakpoints.mobileMax}) {
-      transform: translateX(-100px);
-    }
-  }
-  :nth-child(3) {
-    transform: translateX(0px);
-    @media (min-width: ${breakpoints.mobileMax}) {
-      transform: translateX(-200px);
-    }
+    max-width: 60%;
   }
 `;
 const Work = () => {
@@ -169,21 +147,60 @@ const Work = () => {
               </p>
             </SquareTitle>
           </SquareHeader>
-          <ProjectDescription>
-            <Heading>My Projects</Heading>
-            <Paragraph>
-              I spend lots of my free exploring new technologies and picking up
-              new development projects. <br />
-              <br />
-              Take a look at what I've been working on recently.
-            </Paragraph>
-            <Button>See My Work</Button>
-          </ProjectDescription>
-          <ProjectDiv>
-            <Project />
-            <Project />
-            <Project />
-          </ProjectDiv>
+
+          <Container>
+            <SubContainer>
+              <TextContent>
+                <Heading>My Projects</Heading>
+                <Paragraph>
+                  I spend lots of my free exploring new technologies and picking
+                  up new development projects. <br />
+                  <br />
+                  Take a look at what I've been working on recently.
+                </Paragraph>
+              </TextContent>
+            </SubContainer>
+            <SubContainer>
+              <ProjectRow>
+                <Project>
+                  <ProjectImage />
+                  <SubHeading>Forecast</SubHeading>
+                  <SubParagraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ac pretium magna.
+                  </SubParagraph>
+                </Project>
+                <Project>
+                  <ProjectImage />
+                  <SubHeading>Forecast</SubHeading>
+                  <SubParagraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ac pretium magna.
+                  </SubParagraph>
+                </Project>
+              </ProjectRow>
+            </SubContainer>
+            <SubContainer>
+              <ProjectRow>
+                <Project>
+                  <ProjectImage />
+                  <SubHeading>Forecast</SubHeading>
+                  <SubParagraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ac pretium magna.
+                  </SubParagraph>
+                </Project>
+                <Project>
+                  <ProjectImage />
+                  <SubHeading>Forecast</SubHeading>
+                  <SubParagraph>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis ac pretium magna.
+                  </SubParagraph>
+                </Project>
+              </ProjectRow>
+            </SubContainer>
+          </Container>
         </WorkLanding>
         <Hamburger />
       </Content>
