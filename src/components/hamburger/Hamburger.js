@@ -7,7 +7,8 @@ import close from "./close.svg";
 import { useState } from "react";
 import { breakpoints } from "../../Media";
 import { FaEnvelope, FaGithub } from "react-icons/fa";
-
+import ContactEmail from "../ContactEmail";
+import ContactGithub from "../ContactGithub";
 const HamburgerContainer = styled.div`
   position: fixed;
   right: 0px;
@@ -101,7 +102,7 @@ const NavContainer = styled.div`
 const Links = styled.div`
   margin-top: 100px;
   width: auto;
-  height: 40%;
+  height: 60%;
   & > a {
     width: 200px;
     display: block;
@@ -174,7 +175,7 @@ const Contact = styled.div`
 const ReachOut = styled.div`
   font-size: 13px;
   line-height: 174.19%;
-  height: 25%;
+  height: 5%;
   letter-spacing: 0.03em;
   font-family: "Lato", sans-serif;
 `;
@@ -193,19 +194,16 @@ const Hamburger = () => {
             <Link to="/work">Work.</Link>
             <Link to="/about">Resume.</Link>
           </Links>
+          <ReachOut>Want to work with me?</ReachOut>
           <Contact>
             Sayam Gautam
             <br />
             <FaEnvelope />
             <br />
-            sayamgautam1@gmail.com <br />
+            <ContactEmail /> <br />
             <FaGithub /> <br />
-            sayamgautam1
+            <ContactGithub />
           </Contact>
-          <ReachOut>
-            Want to work with me?
-            {/* <Link>Reach Out</Link> */}
-          </ReachOut>
         </NavContainer>
       </HamburgerContainer>
     </>
