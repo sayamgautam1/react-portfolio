@@ -9,7 +9,7 @@ const Layout = styled.div`
   min-height: 100vh;
   max-width: 2000px;
   margin: 0 auto;
-  overflow: hidden;
+  // overflow: hidden;
   @media (min-width: 900px) {
     width: 100vw;
     height: 100vh;
@@ -24,7 +24,7 @@ const Content = styled.div`
   flex-wrap: wrap;
   position: relative;
   background-color: #f6f6f6;
-  overflow: scroll;
+  // overflow: scroll;
 `;
 
 const AboutLanding = styled.div`
@@ -39,12 +39,46 @@ const RowSpacer = styled.div`
   padding: 80px 0;
 `;
 
+const SquareHeader = styled.div`
+  width: 100%;
+  max-height: 300px;
+  height: 30%;
+  position: relative;
+`;
+
+const SquareTitle = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 30px 30px 5px;
+  background-color: white;
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    font-size: 150px;
+    line-height: 81.45%;
+    letter-spacing: -0.045em;
+    span {
+      color: #b5f6ff;
+    }
+  }
+`;
+
 const Work = () => {
   return (
     <Layout>
       <Content>
         <AboutLanding>
-          <Square />
+          <SquareHeader>
+            <SquareTitle>
+              <p>
+                WO
+                <br />
+                RK<span>.</span>
+              </p>
+            </SquareTitle>
+          </SquareHeader>
           <IntroRow />
         </AboutLanding>
         <Hamburger />
