@@ -6,6 +6,7 @@ import hamburgerHover from "./hamburgerHover.svg";
 import close from "./close.svg";
 import { useState } from "react";
 import { breakpoints } from "../../Media";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
 
 const HamburgerContainer = styled.div`
   position: fixed;
@@ -162,6 +163,22 @@ const Links = styled.div`
   }
 `;
 
+const Contact = styled.div`
+  font-size: 13px;
+  line-height: 174.19%;
+  height: 35%;
+  letter-spacing: 0.03em;
+  font-family: "Lato", sans-serif;
+`;
+
+const ReachOut = styled.div`
+  font-size: 13px;
+  line-height: 174.19%;
+  height: 25%;
+  letter-spacing: 0.03em;
+  font-family: "Lato", sans-serif;
+`;
+
 const Hamburger = () => {
   const [toggle, setToggle] = useState(true);
   return (
@@ -174,8 +191,21 @@ const Hamburger = () => {
             <Link to="/">Home.</Link>
             <Link to="/about">About.</Link>
             <Link to="/work">Work.</Link>
-            <Link to="/about">Contact.</Link>
+            <Link to="/about">Resume.</Link>
           </Links>
+          <Contact>
+            Sayam Gautam
+            <br />
+            <FaEnvelope />
+            <br />
+            sayamgautam1@gmail.com <br />
+            <FaGithub /> <br />
+            sayamgautam1
+          </Contact>
+          <ReachOut>
+            Want to work with me?
+            {/* <Link>Reach Out</Link> */}
+          </ReachOut>
         </NavContainer>
       </HamburgerContainer>
     </>
