@@ -18,3 +18,8 @@ h1 {
 .scrolled {
   color: blue;
 }
+a {
+  text-decoration: none;
+  color: #5e5e5e;
+  letter-spacing: 0.03em;
+}
