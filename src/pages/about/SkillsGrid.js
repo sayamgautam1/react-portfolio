@@ -3,22 +3,38 @@ import styled from "styled-components";
 const DarkGrid = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   background-color: #1c202e;
+  padding: 30px 0;
+  @media (min-width: 900px) {
+    flex-wrap: nowrap;
+  }
 `;
 
 const LeftSkills = styled.div`
-  flex: 40%;
-  padding: 40px;
+  flex: 100%;
+  padding: 0;
+  @media (min-width: 900px) {
+    flex: 40%;
+    padding: 40px;
+  }
 `;
 const RightSkills = styled.div`
-  flex: 30%;
-  padding: 40px;
+  flex: 100%;
+  padding: 0;
+  @media (min-width: 900px) {
+    flex: 30%;
+    padding: 40px;
+  }
 `;
 
 const SkillDescription = styled.div`
   width: 100%;
   color: white;
-  padding: 30px 20%;
+  padding: 30px 30px;
+  @media (min-width: 900px) {
+    padding: 30px 20%;
+  }
   h3 {
     max-width: 250px;
     margin: 30px 0;

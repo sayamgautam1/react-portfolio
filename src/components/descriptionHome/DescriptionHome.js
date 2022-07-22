@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components/macro";
 
 const Description = styled.div`
-  padding: 0;
+  padding: 100px 20px;
   width: 100%;
   flex: 1 0 auto;
   position: relative;
