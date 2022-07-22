@@ -6,6 +6,7 @@ import Heading from "../../components/Heading";
 import Button from "../../components/button/Button";
 import ProjectRowComp from "./ProjectRowComp";
 import IntroRowWork from "./IntroRowWork";
+import SecondRowWork from "./SecondRowWork";
 const Layout = styled.div`
   display: flex;
   min-height: 100vh;
@@ -87,10 +88,6 @@ const SubContainer = styled.div`
   }
 `;
 
-const TextContent = styled.div`
-  max-width: 700px;
-`;
-
 const Work = () => {
   return (
     <Layout>
@@ -110,6 +107,9 @@ const Work = () => {
 
           <SubContainer>
             <ProjectRowComp />
+          </SubContainer>
+          <SubContainer>
+            <SecondRowWork />
           </SubContainer>
         </WorkLanding>
         <Hamburger />
