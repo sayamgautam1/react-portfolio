@@ -40,10 +40,7 @@ const Footer = () => {
       <CenterCTA>
         <h3>Want to learn more?</h3>
         <CenterButton>
-          <Button
-            link="@mailto:sayamgautam1@gmail.com"
-            buttonText="Let's Chat"
-          ></Button>
+          <Button>Let's Chat</Button>
         </CenterButton>
       </CenterCTA>
     </FooterCont>
