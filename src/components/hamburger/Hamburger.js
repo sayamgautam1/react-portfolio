@@ -5,19 +5,27 @@ import hamburger from "./hamburger.svg";
 import hamburgerHover from "./hamburgerHover.svg";
 import close from "./close.svg";
 import { useState } from "react";
+import { breakpoints } from "../../Media";
 
 const HamburgerContainer = styled.div`
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 0px;
   height: 100%;
+  width: 100%;
+  z-index: 9999;
+  @media (min-width: ${breakpoints.mobileMax}) {
+    right: 20px;
+    top: 20px;
+    width: unset;
+  } ;
 `;
 const HamburgerImg = styled.div`
   z-index: 99999;
   display: block;
   position: absolute;
-  top: 40px;
-  right: 80px;
+  top: 30px;
+  right: 60px;
   width: ${(props) => (props.on ? `40px` : `20px`)};
   height: 30px;
   display: block;
@@ -28,16 +36,20 @@ const HamburgerImg = styled.div`
   opacity: 1;
   transform: translate(40px);
   transition-duration: 0.2s;
-  /* animation: fadeIn 1s forwards;
-animation-delay: 1s;
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  @media (min-width: ${breakpoints.mobileMax}) {
+    top: 40px;
+    right: 80px;
   }
-  100% {
-    opacity: 1;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-} */
   &:hover {
     background-image: ${(props) =>
       props.on ? `url(${hamburgerHover})` : `url(${close})`};
@@ -47,17 +59,22 @@ animation-delay: 1s;
 const NavContainer = styled.div`
   height: 100%;
   z-index: 999;
-  padding-left: 80px;
-  width: 500px;
+  width: 100%;
+  padding-left: 30px;
   background-color: white;
   position: ${(props) => (props.on ? "fixed" : "absolute")};
+  display: block;
   right: 0;
   top: 0;
-  display: block;
   opacity: 0;
-  transition: 0.3s;
   animation: ${(props) =>
     props.on ? "SlideOutRight .7s forwards" : "SlideFromLeft .5s forwards"};
+  @media (min-width: ${breakpoints.mobileMax}) {
+    width: 500px;
+    right: 0;
+    top: 0;
+    padding-left: 80px;
+  }
   @keyframes SlideFromLeft {
     0% {
       transform: translate(1000px);
@@ -129,13 +146,15 @@ const Links = styled.div`
     }
     &:hover::after {
       width: 150px;
-      background-color: #ffc7a2;
+      background-color: #ecf3f4;
     }
     &:nth-child(2):hover::after {
       width: 150px;
+      background-color: #ffc7a2;
     }
     &:nth-child(3):hover::after {
       width: 145px;
+      background-color: #b5f6ff;
     }
     &:nth-child(4):hover::after {
       width: 190px;
