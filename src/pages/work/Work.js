@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import Hamburger from "../../components/hamburger/Hamburger";
-import { Link } from "react-router-dom";
 import { breakpoints } from "../../Media";
-import { Container } from "../../components/container/Container";
 import Paragraph from "../../components/Paragraph";
 import Heading from "../../components/Heading";
 import Button from "../../components/button/Button";
+import ProjectRowComp from "./ProjectRowComp";
 const Layout = styled.div`
   display: flex;
   min-height: 100vh;
@@ -75,29 +74,6 @@ const SquareTitle = styled.div`
   }
 `;
 
-const ProjectRow = styled.div`
-  display: flex;
-  width: 100%;
-  margin-bottom: 70px;
-  flex-wrap: wrap;
-  @media (min-width: ${breakpoints.mobileMax}) {
-    flex-wrap: nowrap;
-  }
-`;
-
-const Project = styled.div`
-  width: 100%;
-  height: 450px;
-  :nth-child(1) {
-    margin-right: 0;
-    @media (min-width: ${breakpoints.mobileMax}) {
-      margin-right: 10%;
-    }
-  }
-  @media (min-width: ${breakpoints.mobileMax}) {
-    width: 45%;
-  }
-`;
 const SubContainer = styled.div`
   margin: 0px 0;
   padding: 20px;
@@ -114,53 +90,6 @@ const TextContent = styled.div`
   max-width: 700px;
 `;
 
-const ProjectImage = styled.div`
-  width: 100%;
-  height: 300px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-`;
-
-const SubHeading = styled(Heading)`
-  font-size: 30px;
-  margin-bottom: 0;
-`;
-
-const SubParagraph = styled(Paragraph)`
-  margin-top: 10px;
-  max-width: unset;
-  @media (min-width: ${breakpoints.mobileMax}) {
-    max-width: 60%;
-  }
-`;
-
-const ProjectParagraph = styled(Paragraph)`
-  margin-top: 10px;
-  max-width: unset;
-  margin-bottom: 20px;
-  @media (min-width: ${breakpoints.mobileMax}) {
-    max-width: 60%;
-  }
-`;
-
-const ProjectLink = styled(Paragraph)`
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 163.19%;
-  display: inline;
-  color: black;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  border-bottom: 2px solid white;
-  transition: border-bottom 0.2s;
-  :hover {
-    border-bottom: 2px solid black;
-  }
-  span {
-    font-size: 20px;
-  }
-`;
-
 const Work = () => {
   return (
     <Layout>
@@ -175,96 +104,21 @@ const Work = () => {
               </p>
             </SquareTitle>
           </SquareHeader>
-
-          <Container>
-            <SubContainer>
-              <TextContent>
-                <Heading>My Projects</Heading>
-                <Paragraph>
-                  I spend lots of my free exploring new technologies and picking
-                  up new development projects. <br />
-                  <br />
-                  Take a look at what I've been working on recently.
-                </Paragraph>
-              </TextContent>
-            </SubContainer>
-            <SubContainer>
-              <ProjectRow>
-                <Project>
-                  <a href="#">
-                    <ProjectImage />
-                  </a>
-                  <a href="#">
-                    <SubHeading>Forecast</SubHeading>
-                  </a>
-                  <ProjectParagraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis ac pretium magna.
-                  </ProjectParagraph>
-                  <a href="#">
-                    <ProjectLink>
-                      VISIT PAGE <span>&#8250;</span>
-                    </ProjectLink>
-                  </a>
-                </Project>
-                <Project>
-                  <a href="#">
-                    <ProjectImage />
-                  </a>
-                  <a href="#">
-                    <SubHeading>Forecast</SubHeading>
-                  </a>
-                  <ProjectParagraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis ac pretium magna.
-                  </ProjectParagraph>
-                  <a href="#">
-                    <ProjectLink>
-                      VISIT PAGE <span>&#8250;</span>
-                    </ProjectLink>
-                  </a>
-                </Project>
-              </ProjectRow>
-            </SubContainer>
-            <SubContainer>
-              <ProjectRow>
-                <Project>
-                  <a href="#">
-                    <ProjectImage />
-                  </a>
-                  <a href="#">
-                    <SubHeading>Forecast</SubHeading>
-                  </a>
-                  <ProjectParagraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis ac pretium magna.
-                  </ProjectParagraph>
-                  <a href="#">
-                    <ProjectLink>
-                      VISIT PAGE <span>&#8250;</span>
-                    </ProjectLink>
-                  </a>
-                </Project>
-                <Project>
-                  <a href="#">
-                    <ProjectImage />
-                  </a>
-                  <a href="#">
-                    <SubHeading>Forecast</SubHeading>
-                  </a>
-                  <ProjectParagraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis ac pretium magna.
-                  </ProjectParagraph>
-                  <a href="#">
-                    <ProjectLink>
-                      VISIT PAGE <span>&#8250;</span>
-                    </ProjectLink>
-                  </a>
-                </Project>
-              </ProjectRow>
-            </SubContainer>
-          </Container>
+          <RowSpacer />
+          <SubContainer>
+            <TextContent>
+              <Heading>My Projects</Heading>
+              <Paragraph>
+                I spend lots of my free exploring new technologies and picking
+                up new development projects. <br />
+                <br />
+                Take a look at what I've been working on recently.
+              </Paragraph>
+            </TextContent>
+          </SubContainer>
+          <SubContainer>
+            <ProjectRowComp />
+          </SubContainer>
         </WorkLanding>
         <Hamburger />
       </Content>
