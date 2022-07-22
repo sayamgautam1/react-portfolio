@@ -5,6 +5,7 @@ import Paragraph from "../../components/Paragraph";
 import Heading from "../../components/Heading";
 import Button from "../../components/button/Button";
 import ProjectRowComp from "./ProjectRowComp";
+import IntroRowWork from "./IntroRowWork";
 const Layout = styled.div`
   display: flex;
   min-height: 100vh;
@@ -45,7 +46,7 @@ const WorkLanding = styled.div`
 
 const RowSpacer = styled.div`
   width: 100%;
-  padding: 80px 0;
+  padding: 40px 0;
 `;
 
 const SquareHeader = styled.div`
@@ -104,18 +105,9 @@ const Work = () => {
               </p>
             </SquareTitle>
           </SquareHeader>
-          <RowSpacer />
-          <SubContainer>
-            <TextContent>
-              <Heading>My Projects</Heading>
-              <Paragraph>
-                I spend lots of my free exploring new technologies and picking
-                up new development projects. <br />
-                <br />
-                Take a look at what I've been working on recently.
-              </Paragraph>
-            </TextContent>
-          </SubContainer>
+
+          <IntroRowWork />
+
           <SubContainer>
             <ProjectRowComp />
           </SubContainer>

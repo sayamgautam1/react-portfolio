@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-
+import Paragraph from "../../components/Paragraph";
+import Heading from "../../components/Heading";
+import ipad from "./ipad.jpg";
 const Row = styled.div`
   width: 100%;
   margin-top: 50px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  padding: 50px;
 
   @media (min-width: 900px) {
   }
@@ -22,6 +25,37 @@ const Left = styled.div`
   }
 `;
 
+const Right = styled.div`
+  flex: 100%;
+  padding: 20px;
+  @media (min-width: 900px) {
+    flex: 45%;
+    height: auto;
+    display: flex;
+    position: relative;
+  }
+`;
+
+const RightImage = styled.div`
+  background-position: center center;
+  width: 100%;
+  height: 50vh;
+  max-height: 800px;
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(${ipad});
+  @media (min-width: 900px) {
+    width: 100%;
+    height: 50vh;
+    max-height: 800px;
+    min-height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-image: url(${ipad});
+  }
+`;
 const HeaderText = styled.div`
   flex: 100%;
   padding: 20px;
@@ -54,52 +88,22 @@ const HeaderText = styled.div`
     letter-spacing: 0.03em;
   }
 `;
-
-const Right = styled.div`
-  flex: 100%;
-  padding: 20px;
-  @media (min-width: 900px) {
-    flex: 45%;
-    height: auto;
-    display: flex;
-    position: relative;
-  }
-`;
-
-// const RightImage = styled.div`
-//   background-position: center center;
-//   width: 100%;
-//   height: 50vh;
-//   max-height: 800px;
-//   min-height: 500px;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-image: url(${Me});
-//   @media (min-width: 900px) {
-//     width: 100%;
-//     height: 50vh;
-//     max-height: 800px;
-//     min-height: 500px;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: center right;
-//     background-image: url(${Me});
-//   }
-// `;
-
 const IntroRowWork = () => {
   return (
     <Row>
       <Left>
         <HeaderText>
-          <h1>What I've been working on ?</h1>
+          <Heading>My Projects</Heading>
+          <Paragraph>
+            I spend lots of my free exploring new technologies and picking up
+            new development projects. <br />
+            <br />I like to stay busy and always have a project in the works.
+            Take a look at some of the projects I've dedicated my time to.
+          </Paragraph>
         </HeaderText>
       </Left>
       <Right>
-        <p>
-          I like to stay busy and always have a project in the works. Take a
-          look at some of the projects I've dedicated my time to.
-        </p>
+        <RightImage />
       </Right>
     </Row>
   );
