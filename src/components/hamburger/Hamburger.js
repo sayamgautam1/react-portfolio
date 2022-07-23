@@ -197,7 +197,7 @@ const Hamburger = () => {
               Resume.
             </a>
           </Links>
-          <ReachOut>Want to work with me?</ReachOut>
+          <ReachOut>Get in touch</ReachOut>
           <Contact>
             Sayam Gautam
             <br />

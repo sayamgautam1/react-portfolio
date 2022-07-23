@@ -86,8 +86,8 @@ const TimelineRow = () => {
             Passion.
           </h2>
           <p>
-            Integer non elementum sem, vel convallis erat. Integer non elementum
-            sem, vel convallis erat.
+            Started self-learning,HTML,CSS and javascript learning DOM
+            maipulation in making a ROCK-PAPER-SCISSOR applicaiton
           </p>
         </TimelineText>
       </LeftTriad>

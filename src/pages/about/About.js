@@ -37,8 +37,6 @@ const About = () => {
         <Square />
         <IntroRow />
         <RowSpacer />
-        <TimelineRow />
-        <RowSpacer />
         <SkillsGrid />
         <Hamburger />
         <Footer />
