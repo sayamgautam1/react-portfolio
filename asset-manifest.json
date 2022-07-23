@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.86b8c097.css",
+    "main.js": "/static/js/main.b5be23df.js",
+    "static/js/787.a2cb61a6.chunk.js": "/static/js/787.a2cb61a6.chunk.js",
+    "static/media/moviesearchapp.png": "/static/media/moviesearchapp.55f3e56560bc5f49ead9.png",
+    "static/media/Me.png": "/static/media/Me.560c22c23bff07e42224.png",
+    "static/media/weatherapp.png": "/static/media/weatherapp.82dc39feb07c34e04081.png",
+    "static/media/mybutcher.png": "/static/media/mybutcher.c694ba86a5498a8967db.png",
+    "static/media/techblog.png": "/static/media/techblog.09857362eed2f6829043.png",
+    "static/media/ipad.jpg": "/static/media/ipad.174462ffadafb5ac246e.jpg",
+    "index.html": "/index.html",
+    "static/media/hamburgerHover.svg": "/static/media/hamburgerHover.4d14a5ef45753b3336c9bfcbfae9bfef.svg",
+    "static/media/hamburger.svg": "/static/media/hamburger.21213a6ea86dca269cb1cf24dc00180c.svg",
+    "static/media/close.svg": "/static/media/close.70c8009aa6cd17f4bbe6462d6933e9d1.svg",
+    "main.86b8c097.css.map": "/static/css/main.86b8c097.css.map",
+    "main.b5be23df.js.map": "/static/js/main.b5be23df.js.map",
+    "787.a2cb61a6.chunk.js.map": "/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86b8c097.css",
+    "static/js/main.b5be23df.js"
+  ]
+}
