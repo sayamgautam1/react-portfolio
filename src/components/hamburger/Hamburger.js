@@ -9,6 +9,7 @@ import { breakpoints } from "../../Media";
 import { FaEnvelope, FaGithub } from "react-icons/fa";
 import ContactEmail from "../ContactEmail";
 import ContactGithub from "../ContactGithub";
+import resume from "../resume/sayam_gautam_resume.pdf";
 const HamburgerContainer = styled.div`
   position: fixed;
   right: 0px;
@@ -192,7 +193,9 @@ const Hamburger = () => {
             <Link to="/">Home.</Link>
             <Link to="/about">About.</Link>
             <Link to="/work">Work.</Link>
-            <Link to="/about">Resume.</Link>
+            <a href={resume} target={"_blank"}>
+              Resume.
+            </a>
           </Links>
           <ReachOut>Want to work with me?</ReachOut>
           <Contact>
