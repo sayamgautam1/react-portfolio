@@ -1,5 +1,7 @@
 import Button from "../button/Button";
 import styled from "styled-components";
+import { breakpoints } from "../../Media";
+import ContactEmail from "../ContactEmail";
 
 const FooterCont = styled.div`
   width: 100%;
@@ -30,7 +32,18 @@ const CenterCTA = styled.div`
     letter-spacing: -0.025em;
   }
 `;
-
+const ButtonContainer = styled.div`
+  margin: 0px 0;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
+`;
 const CenterButton = styled.div`
   margin: 0 auto;
 `;
@@ -39,9 +52,12 @@ const Footer = () => {
     <FooterCont>
       <CenterCTA>
         <h3>Want to learn more?</h3>
-        <CenterButton>
-          <Button>Let's Chat</Button>
-        </CenterButton>
+        <ButtonContainer>
+          <Button>
+            {" "}
+            <a href="mailto:sayamgautam1@gmail.com">Let's chat</a>
+          </Button>
+        </ButtonContainer>
       </CenterCTA>
     </FooterCont>
   );
