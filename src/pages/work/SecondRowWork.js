@@ -105,25 +105,18 @@ const SecondRowWork = () => {
   return (
     <ProjectContainer>
       <Project>
-        <a
-          href="https://nolie88.github.io/appvengers-assemble/"
-          target={"_blank"}
-        >
+        <a href="https://peaceful-lake-94344.herokuapp.com/" target={"_blank"}>
           <ProjectImage />
         </a>
-        <a
-          href="https://nolie88.github.io/appvengers-assemble/"
-          target={"_blank"}
-        >
-          <SubHeading>Media Search App</SubHeading>
+        <a href="https://peaceful-lake-94344.herokuapp.com/" target={"_blank"}>
+          <SubHeading>Tech Blog</SubHeading>
         </a>
         <ProjectParagraph>
-          A movie information and searching App using OMDB api and Youtube api.
+          A CMS-style blog site similar to a WordPress site, where developers
+          can publish their blog posts and comment on other developers’ posts as
+          well.
         </ProjectParagraph>
-        <a
-          href="https://github.com/sayamgautam1/media-browser"
-          target={"_blank"}
-        >
+        <a href="https://github.com/sayamgautam1/Tech-Blog" target={"_blank"}>
           <ProjectLink>
             Vist Github <span>&#8250;</span>
           </ProjectLink>
@@ -131,24 +124,23 @@ const SecondRowWork = () => {
       </Project>
       <Project>
         <a
-          href="https://ordering-system-team4.herokuapp.com/"
+          href="https://sayamgautam1.github.io/weather-dashboard/"
           target={"_blank"}
         >
           <ProjectImage />
         </a>
         <a
-          href="https://ordering-system-team4.herokuapp.com/"
+          href="https://sayamgautam1.github.io/weather-dashboard/"
           target={"_blank"}
         >
-          <SubHeading>E-commerce Meat Ordering App</SubHeading>
+          <SubHeading>Weather Dashboard</SubHeading>
         </a>
         <ProjectParagraph>
-          E-Commerce website, that allows you to make contracted orders from a
-          local butcher shop, review past orders and generate invoice of all
-          orders placed till date
+          Client-side weather search site by city leveraging OpenWeather API for
+          current conditions and 5-day forecast.
         </ProjectParagraph>
         <a
-          href="https://github.com/sayamgautam1/E-Commerce_website"
+          href="https://github.com/sayamgautam1/weather-dashboard"
           target={"_blank"}
         >
           <ProjectLink>
