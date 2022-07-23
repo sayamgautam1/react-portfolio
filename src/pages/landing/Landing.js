@@ -3,7 +3,6 @@ import Hamburger from "../../components/hamburger/Hamburger";
 import DescriptionHome from "../../components/descriptionHome/DescriptionHome";
 
 const Layout = styled.div`
-  width: 100vw;
   height: 100vh;
   padding: 20px;
   @media (min-width: 900px) {
@@ -13,11 +12,13 @@ const Layout = styled.div`
 
 const Content = styled.div`
   max-width: 2000px;
+  height: 100%;
   margin: 0 auto;
   background-color: #ecf3f4;
   display: flex;
+  overflow: hidden;
   flex-wrap: wrap;
-  height: 100%;
+  flex: 1;
   position: relative;
 `;
 

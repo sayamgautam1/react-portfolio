@@ -8,9 +8,6 @@
 .long {
   transform: translateY(5px);
 }
-body {
-  overflow: scroll;
-}
 
 h1 {
   font-weight: 900;
