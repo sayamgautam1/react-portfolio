@@ -16,6 +16,7 @@ const Layout = styled.div`
   @media (min-width: ${breakpoints.mobileMax}) {
     width: 100vw;
     height: 100vh;
+    padding: 20px;
   }
 `;
 
