@@ -11,10 +11,12 @@ const ProjectContainer = styled.div`
   margin-bottom: 0px;
   flex-wrap: wrap;
   margin-top: 0px;
+  height: unset;
   @media (min-width: ${breakpoints.mobileMax}) {
     flex-wrap: nowrap;
     margin-bottom: 70px;
     margin-top: 40px;
+    height: 500px;
   }
 `;
 
@@ -39,14 +41,13 @@ const ProjectLink = styled(Paragraph)`
 const ProjectImage = styled.div`
   width: 100%;
   height: 300px;
-  background-color: gray;
   border-radius: 4px;
   transition-duration: 0.3s;
 `;
 
 const Project = styled.div`
   width: 100%;
-  height: 450px;
+  height: auto;
   margin-bottom: 90px;
   transition-duration: 0.3s;
   :hover {
@@ -72,6 +73,7 @@ const Project = styled.div`
       background-image: url(${TechBlogThumb});
       background-size: cover;
       background-position-x: center;
+      background-position-y: center;
     }
   }
   :nth-child(2) {
@@ -79,13 +81,15 @@ const Project = styled.div`
       background-image: url(${WeatherAppThumb});
       background-size: cover;
       background-position-x: center;
+      background-position-y: center;
     }
   }
 `;
+
 const SubHeading = styled(Heading)`
   font-size: 30px;
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 30px;
 `;
 
 const ProjectParagraph = styled(Paragraph)`
@@ -93,7 +97,7 @@ const ProjectParagraph = styled(Paragraph)`
   max-width: unset;
   margin-bottom: 20px;
   @media (min-width: ${breakpoints.mobileMax}) {
-    max-width: 60%;
+    max-width: 70%;
   }
 `;
 
