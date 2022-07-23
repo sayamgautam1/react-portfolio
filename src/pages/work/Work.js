@@ -87,7 +87,18 @@ const SubContainer = styled.div`
     flex-wrap: nowrap;
   }
 `;
-
+const ButtonContainer = styled.div`
+  margin: 0px 0;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (min-width: ${breakpoints.mobileMax}) {
+    flex-wrap: nowrap;
+  }
+`;
 const Work = () => {
   return (
     <Layout>
@@ -111,7 +122,19 @@ const Work = () => {
           <SubContainer>
             <SecondRowWork />
           </SubContainer>
+          <ButtonContainer>
+            <Button>
+              {" "}
+              <a
+                href="https://github.com/sayamgautam1?tab=repositories"
+                target={"_blank"}
+              >
+                View ALL
+              </a>
+            </Button>
+          </ButtonContainer>
         </WorkLanding>
+
         <Hamburger />
       </Content>
     </Layout>

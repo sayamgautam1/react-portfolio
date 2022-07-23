@@ -4,6 +4,7 @@ import Heading from "../../components/Heading";
 import Paragraph from "../../components/Paragraph";
 import TechBlogThumb from "./techblog.png";
 import WeatherAppThumb from "./weatherapp.png";
+import Button from "../../components/button/Button";
 
 const ProjectContainer = styled.div`
   display: flex;
