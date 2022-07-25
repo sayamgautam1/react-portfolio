@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.cf1ff139.css",
-    "main.js": "/react-portfolio/static/js/main.a7b25e07.js",
+    "main.js": "/react-portfolio/static/js/main.f19f5ae2.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/moviesearchapp.png": "/react-portfolio/static/media/moviesearchapp.55f3e56560bc5f49ead9.png",
     "static/media/Me.png": "/react-portfolio/static/media/Me.560c22c23bff07e42224.png",
     "static/media/weatherapp.png": "/react-portfolio/static/media/weatherapp.82dc39feb07c34e04081.png",
     "static/media/mybutcher.png": "/react-portfolio/static/media/mybutcher.c694ba86a5498a8967db.png",
     "static/media/techblog.png": "/react-portfolio/static/media/techblog.09857362eed2f6829043.png",
+    "static/media/sayam_gautam_resume.pdf": "/react-portfolio/static/media/sayam_gautam_resume.4f7b78060834aff90ab3.pdf",
     "static/media/ipad.jpg": "/react-portfolio/static/media/ipad.174462ffadafb5ac246e.jpg",
     "index.html": "/react-portfolio/index.html",
     "static/media/hamburgerHover.svg": "/react-portfolio/static/media/hamburgerHover.4d14a5ef45753b3336c9bfcbfae9bfef.svg",
     "static/media/hamburger.svg": "/react-portfolio/static/media/hamburger.21213a6ea86dca269cb1cf24dc00180c.svg",
     "static/media/close.svg": "/react-portfolio/static/media/close.70c8009aa6cd17f4bbe6462d6933e9d1.svg",
     "main.cf1ff139.css.map": "/react-portfolio/static/css/main.cf1ff139.css.map",
-    "main.a7b25e07.js.map": "/react-portfolio/static/js/main.a7b25e07.js.map",
+    "main.f19f5ae2.js.map": "/react-portfolio/static/js/main.f19f5ae2.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf1ff139.css",
-    "static/js/main.a7b25e07.js"
+    "static/js/main.f19f5ae2.js"
   ]
 }
