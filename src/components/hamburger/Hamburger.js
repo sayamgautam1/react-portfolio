@@ -14,7 +14,7 @@ const HamburgerContainer = styled.div`
   position: fixed;
   right: 0px;
   top: 0px;
-  height: 100%;
+  height: ${(props) => (props.on ? `` : `100%`)};
   width: 100%;
   z-index: 9999;
   @media (min-width: ${breakpoints.mobileMax}) {
@@ -184,32 +184,30 @@ const ReachOut = styled.div`
 const Hamburger = () => {
   const [toggle, setToggle] = useState(true);
   return (
-    <>
-      <HamburgerContainer>
-        <HamburgerImg on={toggle} onClick={() => setToggle(!toggle)} />
+    <HamburgerContainer on={toggle}>
+      <HamburgerImg on={toggle} onClick={() => setToggle(!toggle)} />
 
-        <NavContainer on={toggle}>
-          <Links on={toggle}>
-            <Link to="/">Home.</Link>
-            <Link to="/about">About.</Link>
-            <Link to="/work">Work.</Link>
-            <a href={resume} target={"_blank"}>
-              Resume.
-            </a>
-          </Links>
-          <ReachOut>Get in touch</ReachOut>
-          <Contact>
-            Sayam Gautam
-            <br />
-            <FaEnvelope />
-            <br />
-            <ContactEmail /> <br />
-            <FaGithub /> <br />
-            <ContactGithub />
-          </Contact>
-        </NavContainer>
-      </HamburgerContainer>
-    </>
+      <NavContainer on={toggle}>
+        <Links on={toggle}>
+          <Link to="/">Home.</Link>
+          <Link to="/about">About.</Link>
+          <Link to="/work">Work.</Link>
+          <a href={resume} target={"_blank"}>
+            Resume.
+          </a>
+        </Links>
+        <ReachOut>Get in touch</ReachOut>
+        <Contact>
+          Sayam Gautam
+          <br />
+          <FaEnvelope />
+          <br />
+          <ContactEmail /> <br />
+          <FaGithub /> <br />
+          <ContactGithub />
+        </Contact>
+      </NavContainer>
+    </HamburgerContainer>
   );
 };
 
